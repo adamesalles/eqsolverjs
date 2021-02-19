@@ -9,7 +9,8 @@ Projeto pessoal para desenvolvimento em Javascript.
   
 ## Próximas etapas
 
-- [ ] Refatorar o código
+- [x] Refatorar o código
 - [ ] Melhorar experiência visual (custom CSS)
 - [ ] Aprimorar algorítimo (Entregar uma única raiz quando a = 0)
-- [ ] Entender como funcionam números complexos no JS e aplicar.
+- [x] Entender como funcionam números complexos no JS e aplicar.
+- [x] LaTeX integrado
