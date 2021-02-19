@@ -18,10 +18,10 @@ btn.onclick = () => {
     Delta: math.sqrt(delta)
   };
   let ans = math.evaluate(['-B + Delta/(2*A)','-B - Delta/(2*A)'], scope);
-  (ans[0].re != undefined) ? showAnswer(`$${ans[0].re}$ + $${ans[0].im}i$ e $${ans[1].re}$ + $${ans[1].im}i$`) : showAnswer(`$${ans[0]}$ e $${ans[1]}$`);};
+  (ans[0].re != undefined) ? showAnswer(`$x_1 = ${ans[0].re} + ${ans[0].im}i$ \n $ x_2 = ${ans[1].re} + ${ans[1].im}i$`) : showAnswer(`$ x_1 = ${ans[0]}$ \n $ x_2 = ${ans[1]}$`);};
 
 function showAnswer(ans){
   ansElement.className = "card-panel teal lighten-2";
-  ansText.innerText = 'As raízes são: ' + ans;
+  ansText.innerText = 'As raízes são: \n' + ans;
   MathJax.typeset()
 };
