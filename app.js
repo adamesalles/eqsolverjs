@@ -28,7 +28,7 @@ btn.onclick = () => {
   }};
 
 function showAnswer(ans){
-  ansElement.className = "card-panel teal lighten-2";
+  ansElement.className = "col-md-12 MathJax_Display";
   ansText.innerText = ans;
   MathJax.typeset()
 };

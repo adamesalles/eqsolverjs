@@ -4,49 +4,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Solucionador de Equações do Segundo Grau</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <!-- Compiled and minified JavaScript -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="mathjax-config.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/9.2.0/math.js" integrity="sha512-SewEag0kt1xsJdbfAXgLyLvYXeAoGEla4M6JSitT6ocJVI+VeUbFXkgrbloNn4cVgq46caRf31un2eoalq6YOw==" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
-<body>
-  <nav>
-    <div class="nav-wrapper">
-      <a href="#" class="brand-logo center">Solucionador de Equações do Segundo Grau</a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
+<body class="bg-primary">
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-center">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link h4" href="#"><center> Solucionador de Equações do Segundo Grau</center></a>
+      </li>
       </ul>
-    </div>
   </nav>
-  <div class="container" id="app">
-    
+  <div class="container-fluid p-3 sticky-top bg-primary text-white" id="app">
     <div class="row">
-      <div class="col s8 offset-s2">
-        <div class="card-panel teal lighten-2">
+      <div class="col-md-8">
+        <div class="card-panel teal lighten-2 MathJax_Display">
           <p class="white-text" id="eqShow">$$ ax^2 + bx + c = 0 $$ $$ \Delta = b^2 - 4ac  $$ $$ x = \dfrac{-b \pm \sqrt{\Delta}}{2a}$$</p>
         </div>
-        <input type="number" id="aconst" placeholder="Coeficiente 'a'">
-        <input type="number" id="bconst" placeholder="Coeficiente 'b'">
-        <input type="number" id="cconst" placeholder="Coeficiente 'c'">
-        <button class="btn-large waves-effect waves-light" type="submit" id="calc">Calcule</button>
-        <div id="ans">
-          <p class="white-text" id="ansText"></p>
-        </div>
+      </div>
+        <div class="col-md-4 px-4">
+          <div class="input-group mb-2">
+            <div class="input-group-prepend">
+              <span class="input-group-text">$a$</span>
+            </div>
+            <input type="number" class="form-control" id="aconst" placeholder="Coeficiente 'a'">
+          </div>
+          <div class="input-group mb-2">
+            <div class="input-group-prepend">
+              <span class="input-group-text">$b$</span>
+            </div>
+            <input type="number" class="form-control" id="bconst" placeholder="Coeficiente 'b'">
+          </div>
+          <div class="input-group mb-2">
+            <div class="input-group-prepend">
+              <span class="input-group-text">$c$</span>
+            </div>
+            <input type="number" class="form-control" id="cconst" placeholder="Coeficiente 'c'">
+          </div>
+        <button class="btn btn-light btn-block" type="button" id="calc">Calcule</button>
       </div>
     </div>
+      <div class="row p-3">
+       <div id="ans">
+         <center>
+           <p class="white-text" id="ansText"></p>
+          </center>
+      </div> 
+      </div>
+      
     
   </div>
-  <footer class="page-footer">
-    <div class="footer-copyright">
-      <div class="container">
-        © 2021 Eduardo Adame Salles
-        <a class="grey-text text-lighten-4 right" href="https://github.com/adamesalles">Github</a>
-      </div>
+  <footer class="bg-light text-center text-lg-start fixed-bottom">
+    <!-- Copyright -->
+    <div class="text-center p-3">
+      © 2021 Eduardo Adame Salles - 
+      <a class="text-dark" href="https://github.com/adamesalles">Github</a>
     </div>
+    <!-- Copyright -->
   </footer>
   <script src="app.js"></script>
 </body>
