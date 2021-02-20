@@ -19,7 +19,7 @@ btn.onclick = () => {
   if (aC == 0){
     if (bC == 0) {
       eqShow.innerText = `$$ ${cC} = 0 $$`;
-      ( (cC == 0) ? showAnswer('A raíz é: \n $x = 0$'): showAnswer('A equação não é verdadeira, portanto não há raíz(es).'));
+      ( (cC == 0) ? showAnswer('Sim, $0 = 0$.'): showAnswer('A equação não é verdadeira, portanto não há raíz(es).'));
     } else {
       eqShow.innerText = `$$ ${bC != 1 ? bC : ''}x + ${cC} = 0 $$ $$ x = \\dfrac{-${cC}}{${bC}} $$`;
       let ans = math.evaluate('-C/B', scope);
